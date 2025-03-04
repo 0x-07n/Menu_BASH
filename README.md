@@ -39,22 +39,17 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 
 ### Le code
 
-auto_update
-``` bash
+#### auto_update
+```bash
 auto_update() {
     echo "  "
-
     echo "Mise à jour de la liste de paquets..." 
     sudo apt-get update 
     echo "  "
-
     echo "Mise à niveau des paquets installés..." 
     sudo apt-get upgrade -y 
-
     echo "  "
-
     echo "Script exécuté le $(date)" 
-
     read -p "Voulez-vous redémarrer le système maintenant ? (o/n) " response
     if [[ "$response" =~ ^[Oo]$ ]]; then
         echo "Redémarrage du système..." 
@@ -66,12 +61,142 @@ auto_update() {
 }
 ```
 
-lister_utilisateurs
-``` bash
+#### lister_utilisateurs
+```bash
 lister_utilisateurs() {
     echo "  "
     echo "Liste des utilisateurs :"
     cut -d: -f1 /etc/passwd
     echo "  "
+}
+```
+
+#### creer_utilisateur
+```bash
+creer_utilisateur() {
+    echo "  "
+    read -p "Entrez le nom du nouvel utilisateur : " username
+    sudo adduser "$username"
+    echo "Utilisateur $username créé avec succès."
+    echo "  "
+}
+```
+
+#### supprimer_utilisateur
+```bash
+supprimer_utilisateur() {
+    echo "  "
+    read -p "Entrez le nom de l'utilisateur à supprimer : " username
+    sudo deluser "$username"
+    echo "Utilisateur $username supprimé."
+    echo "  "
+}
+```
+
+#### nslookup_domaine
+```bash
+nslookup_domaine() {
+    echo "  "
+    read -p "Entrez le domaine à analyser : " domaine
+    nslookup "$domaine"
+    echo "  "
+}
+```
+
+#### installer_btop
+```bash
+installer_btop() {
+    echo "  "
+    echo "Installation de btop..."
+    sudo apt-get install -y btop
+    echo "  "
+    echo "Lancement de btop..."
+    btop
+}
+```
+
+#### afficher_config_reseau
+```bash
+afficher_config_reseau() {
+    echo "  "
+    echo "Configuration réseau actuelle :"
+    ip a
+    echo "  "
+}
+```
+
+#### surveillance_disque
+```bash
+surveillance_disque() {
+    echo "  "
+    echo "Utilisation du disque :"
+    df -h
+    echo "  "
+}
+```
+
+#### lister_pids
+```bash
+lister_pids() {
+    echo "  "
+    echo "Liste des processus en cours :"
+    ps aux
+    echo "  "
+}
+```
+
+#### supprimer_processus
+```bash
+supprimer_processus() {
+    echo "  "
+    read -p "Entrez le nom de l'utilisateur dont vous voulez tuer les processus : " user
+    pkill -u "$user"
+    echo "Processus de $user supprimés."
+    echo "  "
+}
+```
+
+#### ping_host
+```bash
+ping_host() {
+    echo "  "
+    read -p "Entrez l'adresse IP ou le domaine à ping : " host
+    ping -c 4 "$host"
+    echo "  "
+}
+```
+
+#### afficher_stats_ram
+```bash
+afficher_stats_ram() {
+    echo "  "
+    echo "Statistiques de la mémoire RAM :"
+    free -h
+    echo "  "
+}
+```
+
+#### afficher_stats_cpu
+```bash
+afficher_stats_cpu() {
+    echo "  "
+    echo "Statistiques du CPU :"
+    top -b -n 1 | head -n 10
+    echo "  "
+}
+```
+
+#### clear_screen
+```bash
+clear_screen() {
+    clear
+}
+```
+
+#### quitter
+```bash
+quitter() {
+    echo "Fermeture du script."
+    exit 0
 }
 ```
