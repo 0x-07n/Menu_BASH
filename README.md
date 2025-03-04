@@ -41,6 +41,7 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 ### Le code
 
 #### auto_update
+Cette fonction met à jour votre système en téléchargeant et en installant les dernières versions des logiciels disponibles. La fonction demande à l'utilisateur si il veut redémarrer le système.
 ```bash
 auto_update() {
     echo "  "
@@ -61,8 +62,11 @@ auto_update() {
     fi
 }
 ```
+
+
 ---
 #### lister_utilisateurs
+Cette fonction affiche une liste de tous les utilisateurs qui ont un compte sur votre système.
 ```bash
 lister_utilisateurs() {
     echo "  "
@@ -71,8 +75,11 @@ lister_utilisateurs() {
     echo "  "
 }
 ```
+
+
 ---
 #### creer_utilisateur
+Cette fonction vous permet de créer un nouveau compte utilisateur sur le système.
 ```bash
 creer_utilisateur() {
     echo "  "
@@ -82,8 +89,11 @@ creer_utilisateur() {
     echo "  "
 }
 ```
+
+
 ---
 #### supprimer_utilisateur
+Cette fonction supprime un compte utilisateur existant du système. 
 ```bash
 supprimer_utilisateur() {
     echo "  "
@@ -93,8 +103,11 @@ supprimer_utilisateur() {
     echo "  "
 }
 ```
+
+
 ---
 #### nslookup_domaine
+Cette fonction vous permet de rechercher des informations sur un nom de domaine (comme un site web).
 ```bash
 nslookup_domaine() {
     echo "  "
@@ -103,8 +116,11 @@ nslookup_domaine() {
     echo "  "
 }
 ```
+
+
 ---
 #### installer_btop
+Cette fonction installe un outil appelé btop, qui permet de surveiller les performances de votre système en temps réel.
 ```bash
 installer_btop() {
     echo "  "
@@ -115,7 +131,8 @@ installer_btop() {
     btop
 }
 ```
----
+
+Celle ci permet de le lancer.
 #### afficher_btop
 ```bash
 afficher_btop() {
@@ -125,8 +142,12 @@ afficher_btop() {
     btop
 }
 ```
+
+
+
 ---
 #### afficher_config_reseau
+Cette fonction affiche les détails de la configuration réseau de votre système, comme les adresses IP et les connexions.
 ```bash
 afficher_config_reseau() {
     echo "  "
@@ -135,8 +156,11 @@ afficher_config_reseau() {
     echo "  "
 }
 ```
+
+
 ---
 #### surveillance_disque
+Cette fonction surveille l'utilisation de l'espace disque sur votre système et vous avertit si l'espace est presque plein.
 ```bash
 surveillance_disque() {
     echo "  "
@@ -152,8 +176,11 @@ surveillance_disque() {
     echo "  "
 }
 ```
+
+
 ---
 #### lister_pids
+Cette fonction affiche une liste de tous les processus en cours d'exécution sur votre système.
 ```bash
 lister_pids() {
     echo "  "
@@ -162,8 +189,11 @@ lister_pids() {
     echo "  "
 }
 ```
+
+
 ---
 #### supprimer_processus
+Cette fonction arrête tous les processus en cours d'exécution pour un utilisateur spécifique.
 ```bash
 supprimer_processus() {
     echo "Attention : Vous êtes sur le point de supprimer tous les processus utilisateur."
@@ -177,8 +207,11 @@ supprimer_processus() {
     fi
 }
 ```
+
+
 ---
 #### ping_host
+Cette fonction envoie des signaux à un autre ordinateur ou serveur pour vérifier s'il est accessible. 
 ```bash
 ping_host() {
     echo "   "
@@ -188,8 +221,11 @@ ping_host() {
     echo "   "
 }
 ```
+
+
 ---
 #### afficher_stats_ram
+Cette fonction affiche des informations sur l'utilisation de la mémoire RAM de votre système.
 ```bash
 afficher_stats_ram() {
     echo "  "
@@ -198,34 +234,46 @@ afficher_stats_ram() {
     echo "  "
 }
 ```
+
+
 ---
 #### afficher_stats_cpu
+Cette fonction affiche des informations sur l'utilisation du processeur de votre système.
+
 ```bash
 afficher_stats_cpu() {
     echo "Statistiques du CPU :"
     top -bn1 | grep "Cpu(s)"
 }
 ```
+
 ---
 
 #### clear_screen
+Cette fonction efface tout le contenu affiché à l'écran, le rendant vide.
 ```bash
 clear_screen() {
     clear
 }
 ```
+
+
 ---
 
 #### quitter
+Cette fonction ferme le script, mettant fin à son exécution.
 ```bash
 quitter() {
     echo "Au revoir !"
     exit 0
 }
 ```
+
+
 ---
 
 #### afficher_menu
+Cette fonction affiche un menu avec une liste d'options que vous pouvez choisir pour exécuter différentes tâches.
 ```bash
 afficher_menu() {
     echo "╔════════════════════════════════════════════════════════════════════════════╗"
@@ -250,9 +298,11 @@ afficher_menu() {
     echo "╚════════════════════════════════════════════════════════════════════════════╝"
 }
 ```
+
 ---
 
 #### boucle principale 
+Cette boucle maintient le script en cours d'exécution, affichant le menu et attendant que vous choisissiez une option.
 ```bash 
 while true; do
     afficher_menu
