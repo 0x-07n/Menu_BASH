@@ -37,7 +37,7 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 - Quitter proprement le script ([`quitter`](#quitter))
 
 ---
-# Guide d'utilisation du script_menu.sh
+# 📚 Guide d'utilisation du script_menu.sh
 
 1. **Ouvrez un terminal.**
 
@@ -71,7 +71,7 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 
 ---
 
-### Explication code
+### 💻 Explication code
 ([`voir le script`](/script_menu.sh))
 
 #### auto_update
