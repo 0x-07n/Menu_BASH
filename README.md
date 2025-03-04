@@ -11,10 +11,10 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 ## Fonctionnalités
 
 ### 🔧 Mise à jour automatique du système
-- Mise à jour des paquets (#auto_update)
+- Mise à jour des paquets (`auto_update`)
 
 ### 👤 Gestion des utilisateurs
-- Lister les utilisateurs (#lister_utilisateurs)
+- Lister les utilisateurs (`lister_utilisateurs`)
 - Créer un utilisateur (`creer_utilisateur`)
 - Supprimer un utilisateur (`supprimer_utilisateur`)
 
@@ -39,7 +39,7 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 
 ### Le code
 
-### auto_update
+#### auto_update
 ```bash
 auto_update() {
     echo "  "
