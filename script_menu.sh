@@ -131,8 +131,10 @@ ping_host() {
 
 # Fonction pour afficher les statistiques de la RAM
 afficher_stats_ram() {
-    echo "Statistiques de la RAM :"
+    echo "  "
+    echo "Statistiques de la mémoire RAM :"
     free -h
+    echo "  "
 }
 
 # Fonction pour afficher les statistiques du CPU
