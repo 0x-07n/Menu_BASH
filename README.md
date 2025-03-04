@@ -11,7 +11,7 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 ## Fonctionnalités
 
 ### 🔧 Mise à jour automatique du système
-- Mise à jour des paquets ([`auto_update`](#auto_update)
+- Mise à jour des paquets ([`auto_update`](#auto_update))
 
 ### 👤 Gestion des utilisateurs
 - Lister les utilisateurs (`lister_utilisateurs`)
