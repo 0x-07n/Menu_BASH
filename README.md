@@ -37,17 +37,11 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 - Quitter proprement le script ([`quitter`](#quitter))
 
 ---
-### Guide d'utilisation
 # Guide d'utilisation du script_menu.sh
-
-## Description
-
-Ce script fournit un menu interactif pour effectuer diverses tâches d'administration système sur un système Linux.
 
 ## Prérequis
 
 - Avoir les privilèges administrateur (sudo) pour certaines opérations.
-- Assurez-vous que les outils nécessaires (comme btop, ip, etc.) sont installés.
 
 ## Instructions d'utilisation
 
