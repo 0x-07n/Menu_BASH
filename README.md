@@ -37,4 +37,32 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 
 ---
 
+### Le code
+
+``` bash
+# Fonction pour auto_update
+auto_update() {
+    echo "  "
+
+    echo "Mise à jour de la liste de paquets..." 
+    sudo apt-get update 
+    echo "  "
+
+    echo "Mise à niveau des paquets installés..." 
+    sudo apt-get upgrade -y 
+
+    echo "  "
+
+    echo "Script exécuté le $(date)" 
+
+    read -p "Voulez-vous redémarrer le système maintenant ? (o/n) " response
+    if [[ "$response" =~ ^[Oo]$ ]]; then
+        echo "Redémarrage du système..." 
+        sudo reboot
+    else
+        echo "Redémarrage annulé par l'utilisateur." 
+        echo "   "
+    fi
+}
+```
 
