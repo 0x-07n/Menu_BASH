@@ -56,10 +56,8 @@ Ce script fournit un menu interactif pour effectuer diverses tâches d'administr
 2. **Téléchargez le script depuis Git :**
    - Utilisez la commande `git clone` pour cloner le dépôt contenant le script.
      ```bash
-     git clone <URL_DU_DEPOT>
+     git clone https://github.com/nexzzoo/Menu_BASH/edit/script_menu.sh
      ```
-   - Remplacez `<URL_DU_DEPOT>` par l'URL de votre dépôt Git.
-
 3. **Naviguez jusqu'au répertoire du script :**
    - Utilisez la commande `cd` pour accéder au répertoire où le script a été téléchargé.
      ```bash
