@@ -39,8 +39,8 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 
 ### Le code
 
+auto_update
 ``` bash
-# Fonction pour auto_update
 auto_update() {
     echo "  "
 
@@ -66,3 +66,12 @@ auto_update() {
 }
 ```
 
+lister_utilisateurs
+``` bash
+lister_utilisateurs() {
+    echo "  "
+    echo "Liste des utilisateurs :"
+    cut -d: -f1 /etc/passwd
+    echo "  "
+}
+```
