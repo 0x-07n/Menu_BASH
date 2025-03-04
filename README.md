@@ -39,12 +39,6 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 ---
 # Guide d'utilisation du script_menu.sh
 
-## Prérequis
-
-- Avoir les privilèges administrateur (sudo) pour certaines opérations.
-
-## Instructions d'utilisation
-
 1. **Ouvrez un terminal.**
 
 2. **Téléchargez le script depuis Git :**
