@@ -37,6 +37,53 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 - Quitter proprement le script ([`quitter`](#quitter))
 
 ---
+### Guide d'utilisation
+# Guide d'utilisation du script_menu.sh
+
+## Description
+
+Ce script fournit un menu interactif pour effectuer diverses tâches d'administration système sur un système Linux.
+
+## Prérequis
+
+- Avoir les privilèges administrateur (sudo) pour certaines opérations.
+- Assurez-vous que les outils nécessaires (comme btop, ip, etc.) sont installés.
+
+## Instructions d'utilisation
+
+1. **Ouvrez un terminal.**
+
+2. **Téléchargez le script depuis Git :**
+   - Utilisez la commande `git clone` pour cloner le dépôt contenant le script.
+     ```bash
+     git clone <URL_DU_DEPOT>
+     ```
+   - Remplacez `<URL_DU_DEPOT>` par l'URL de votre dépôt Git.
+
+3. **Naviguez jusqu'au répertoire du script :**
+   - Utilisez la commande `cd` pour accéder au répertoire où le script a été téléchargé.
+     ```bash
+     cd <NOM_DU_REPERTOIRE>
+     ```
+   - Remplacez `<NOM_DU_REPERTOIRE>` par le nom du répertoire contenant le script.
+
+4. **Rendez le script exécutable :**
+   - Exécutez la commande suivante :
+     ```bash
+     chmod +x script_menu.sh
+     ```
+
+5. **Exécutez le script :**
+   - Tapez `./script_menu.sh` dans le terminal et appuyez sur Entrée.
+
+6. **Utilisez les flèches du clavier pour naviguer dans le menu et sélectionnez une option en tapant le numéro correspondant.**
+
+## Remarques
+
+- Soyez prudent lors de la suppression des processus ou des utilisateurs.
+- Certaines actions nécessitent des privilèges administrateur et vous demanderont de confirmer avec votre mot de passe sudo.
+
+---
 
 ### Explication code
 ([`voir le script`](/script_menu.sh))
