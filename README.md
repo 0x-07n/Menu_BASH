@@ -4,6 +4,10 @@
 
 Ce projet est un script Bash interactif permettant d'effectuer diverses tâches d'administration système sous Linux. Il offre un menu simple pour automatiser la gestion des utilisateurs, la surveillance du système, la configuration réseau et bien plus encore.
 
+## Prérequis
+
+Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout autre système utilisant `apt` comme gestionnaire de paquets. Il ne fonctionnera pas sur des distributions utilisant `yum`, `dnf` (Fedora, CentOS) ou `pacman` (Arch Linux).
+
 ## Fonctionnalités
 
 ### 🔧 Mise à jour automatique du système
@@ -33,10 +37,4 @@ Ce projet est un script Bash interactif permettant d'effectuer diverses tâches 
 
 ---
 
-## Installation et Utilisation
 
-### 📥 Installation des dépendances
-Assurez-vous que votre système dispose des outils nécessaires avant d'exécuter le script :
-
-```bash
-sudo apt-get update && sudo apt-get install btop -y
