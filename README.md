@@ -24,7 +24,8 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 - Pinger un hôte (`ping_host`)
 
 ### 📊 Surveillance du système
-- Installation et affichage de `btop` (`installer_btop`, `afficher_btop`)
+- Installation de `btop` (`installer_btop`)
+- Afficher `btop` (`afficher_btop`)
 - Surveillance de l'espace disque (`surveillance_disque`)
 - Lister les processus en cours (`lister_pids`)
 - Supprimer les processus utilisateur (`supprimer_processus`)
