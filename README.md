@@ -61,7 +61,7 @@ auto_update() {
     fi
 }
 ```
-
+---
 #### lister_utilisateurs
 ```bash
 lister_utilisateurs() {
@@ -71,7 +71,7 @@ lister_utilisateurs() {
     echo "  "
 }
 ```
-
+---
 #### creer_utilisateur
 ```bash
 creer_utilisateur() {
@@ -82,7 +82,7 @@ creer_utilisateur() {
     echo "  "
 }
 ```
-
+---
 #### supprimer_utilisateur
 ```bash
 supprimer_utilisateur() {
@@ -93,7 +93,7 @@ supprimer_utilisateur() {
     echo "  "
 }
 ```
-
+---
 #### nslookup_domaine
 ```bash
 nslookup_domaine() {
@@ -103,7 +103,7 @@ nslookup_domaine() {
     echo "  "
 }
 ```
-
+---
 #### installer_btop
 ```bash
 installer_btop() {
@@ -115,7 +115,7 @@ installer_btop() {
     btop
 }
 ```
-
+---
 #### afficher_btop
 ```bash
 afficher_btop() {
@@ -125,7 +125,7 @@ afficher_btop() {
     btop
 }
 ```
-
+---
 #### afficher_config_reseau
 ```bash
 afficher_config_reseau() {
@@ -135,7 +135,7 @@ afficher_config_reseau() {
     echo "  "
 }
 ```
-
+---
 #### surveillance_disque
 ```bash
 surveillance_disque() {
@@ -152,7 +152,7 @@ surveillance_disque() {
     echo "  "
 }
 ```
-
+---
 #### lister_pids
 ```bash
 lister_pids() {
@@ -162,7 +162,7 @@ lister_pids() {
     echo "  "
 }
 ```
-
+---
 #### supprimer_processus
 ```bash
 supprimer_processus() {
@@ -177,7 +177,7 @@ supprimer_processus() {
     fi
 }
 ```
-
+---
 #### ping_host
 ```bash
 ping_host() {
@@ -188,7 +188,7 @@ ping_host() {
     echo "   "
 }
 ```
-
+---
 #### afficher_stats_ram
 ```bash
 afficher_stats_ram() {
@@ -198,7 +198,7 @@ afficher_stats_ram() {
     echo "  "
 }
 ```
-
+---
 #### afficher_stats_cpu
 ```bash
 afficher_stats_cpu() {
@@ -206,6 +206,7 @@ afficher_stats_cpu() {
     top -bn1 | grep "Cpu(s)"
 }
 ```
+---
 
 #### clear_screen
 ```bash
@@ -213,6 +214,7 @@ clear_screen() {
     clear
 }
 ```
+---
 
 #### quitter
 ```bash
@@ -221,6 +223,7 @@ quitter() {
     exit 0
 }
 ```
+---
 
 #### afficher_menu
 ```bash
@@ -247,6 +250,7 @@ afficher_menu() {
     echo "╚════════════════════════════════════════════════════════════════════════════╝"
 }
 ```
+---
 
 #### boucle principale 
 ```bash 
