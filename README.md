@@ -41,7 +41,7 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 ### Explication code
 ([`voir le script`](/script_menu.sh))
 
-#### auto_update
+#### <a name="auto_update"></a>auto_update
 Cette fonction met à jour votre système en téléchargeant et en installant les dernières versions des logiciels disponibles. La fonction demande à l'utilisateur si il veut redémarrer le système.
 ```bash
 auto_update() {
