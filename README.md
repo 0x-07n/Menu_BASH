@@ -44,7 +44,7 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 2. **Téléchargez le script depuis Git :**
    - Utilisez la commande `git clone` pour cloner le dépôt contenant le script.
      ```bash
-     git clone https://github.com/nexzzoo/Menu_BASH/edit/script_menu.sh
+     git clone https://github.com/0x-07n/Menu_BASH/edit/script_menu.sh
      ```
 3. **Naviguez jusqu'au répertoire du script :**
    - Utilisez la commande `cd` pour accéder au répertoire où le script a été téléchargé.
