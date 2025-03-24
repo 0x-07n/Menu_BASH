@@ -27,6 +27,7 @@ auto_update() {
 
 # Fonction pour lister les utilisateurs
 lister_utilisateurs() {
+    clear
     echo "  "
     echo "Liste des utilisateurs :"
     cut -d: -f1 /etc/passwd
@@ -35,6 +36,7 @@ lister_utilisateurs() {
 
 # Fonction pour créer un utilisateur
 creer_utilisateur() {
+    clear
     echo "  "
     read -p "Entrez le nom du nouvel utilisateur : " username
     sudo useradd -m "$username"
@@ -44,6 +46,7 @@ creer_utilisateur() {
 
 # Fonction pour supprimer un utilisateur
 supprimer_utilisateur() {
+    clear
     echo "  "
     read -p "Entrez le nom de l'utilisateur à supprimer : " username
     sudo userdel -r "$username"
@@ -53,6 +56,7 @@ supprimer_utilisateur() {
 
 # Fonction pour effectuer un nslookup d'un domaine
 nslookup_domaine() {
+    clear
     echo "  "
     read -p "Entrez le nom de domaine : " domaine
     nslookup "$domaine"
@@ -61,6 +65,7 @@ nslookup_domaine() {
 
 # Fonction pour installer BTOP
 installer_btop() {
+    clear
     echo "  "
     echo "Installation de BTOP..."
     sudo apt-get install btop -y
@@ -70,6 +75,7 @@ installer_btop() {
 
 # Fonction pour afficher BTOP
 afficher_btop() {
+    clear
     echo "  "
     echo "Lancement de BTOP..."
     echo "  "
@@ -78,6 +84,7 @@ afficher_btop() {
 
 # Fonction pour afficher la configuration réseau
 afficher_config_reseau() {
+    clear
     echo "Configuration réseau :"
     echo "Nom d'hôte : $(hostname)"
     echo "Adresses IP et interfaces :"
@@ -86,6 +93,7 @@ afficher_config_reseau() {
 
 # Fonction pour surveiller l'espace disque
 surveillance_disque() {
+    clear
     echo "  "
     echo "Utilisation de l'espace disque :"
     df -h
@@ -101,6 +109,7 @@ surveillance_disque() {
 
 # Fonction pour lister tous les PID en cours
 lister_pids() {
+    clear
     echo "  "
     echo "Liste des PID en cours :"
     ps -e -o pid,comm
@@ -109,6 +118,7 @@ lister_pids() {
 
 # Fonction pour supprimer tous les processus (à utiliser avec précaution)
 supprimer_processus() {
+    clear
     echo "Attention : Vous êtes sur le point de supprimer tous les processus utilisateur."
     read -p "Êtes-vous sûr de vouloir continuer ? (o/n) " response
     if [[ "$response" =~ ^[Oo]$ ]]; then
@@ -122,6 +132,7 @@ supprimer_processus() {
 
 # Fonction pour effectuer un ping sur un hôte
 ping_host() {
+    clear
     echo "   "
     read -p "Entrez l'adresse IP ou le nom d'hôte à pinguer : " host
     echo "Ping de $host :"
@@ -131,14 +142,14 @@ ping_host() {
 
 # Fonction pour afficher les statistiques de la RAM
 afficher_stats_ram() {
-    echo "  "
-    echo "Statistiques de la mémoire RAM :"
+    clear
+    echo "Statistiques de la RAM :"
     free -h
-    echo "  "
 }
 
 # Fonction pour afficher les statistiques du CPU
 afficher_stats_cpu() {
+    clear
     echo "Statistiques du CPU :"
     top -bn1 | grep "Cpu(s)"
 }
@@ -169,7 +180,7 @@ afficher_menu() {
     echo "║ 8. Afficher la configuration réseau                                        ║"
     echo "║ 9. Surveiller l'espace disque                                              ║"
     echo "║ 10. Lister tous les PID en cours                                           ║"
-    echo "║ 11. Supprimer tous les processus utilisateur sauf ce script                ║"
+    echo "║ 11. Supprimer tous les processus utilisateur                               ║"
     echo "║ 12. Effectuer un ping                                                      ║"
     echo "║ 13. Afficher les statistiques de la RAM                                    ║"
     echo "║ 14. Afficher les statistiques du CPU                                       ║"
