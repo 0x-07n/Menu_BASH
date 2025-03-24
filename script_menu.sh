@@ -2,6 +2,7 @@
 clear 
 # Fonction pour auto_update
 auto_update() {
+    clear
     echo "  "
 
     echo "Mise à jour de la liste de paquets..." 
