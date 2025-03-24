@@ -78,6 +78,7 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 Cette fonction met à jour votre système en téléchargeant et en installant les dernières versions des logiciels disponibles. La fonction demande à l'utilisateur si il veut redémarrer le système.
 ```bash
 auto_update() {
+    clear
     echo "  "
     echo "Mise à jour de la liste de paquets..." 
     sudo apt-get update 
@@ -103,6 +104,7 @@ auto_update() {
 Cette fonction affiche une liste de tous les utilisateurs qui ont un compte sur votre système.
 ```bash
 lister_utilisateurs() {
+    clear
     echo "  "
     echo "Liste des utilisateurs :"
     cut -d: -f1 /etc/passwd
@@ -116,6 +118,7 @@ lister_utilisateurs() {
 Cette fonction vous permet de créer un nouveau compte utilisateur sur le système.
 ```bash
 creer_utilisateur() {
+    clear
     echo "  "
     read -p "Entrez le nom du nouvel utilisateur : " username
     sudo adduser "$username"
@@ -130,6 +133,7 @@ creer_utilisateur() {
 Cette fonction supprime un compte utilisateur existant du système. 
 ```bash
 supprimer_utilisateur() {
+    clear
     echo "  "
     read -p "Entrez le nom de l'utilisateur à supprimer : " username
     sudo deluser "$username"
@@ -144,6 +148,7 @@ supprimer_utilisateur() {
 Cette fonction vous permet de rechercher des informations sur un nom de domaine (comme un site web).
 ```bash
 nslookup_domaine() {
+    clear
     echo "  "
     read -p "Entrez le domaine à analyser : " domaine
     nslookup "$domaine"
@@ -157,6 +162,7 @@ nslookup_domaine() {
 Cette fonction installe un outil appelé btop, qui permet de surveiller les performances de votre système en temps réel.
 ```bash
 installer_btop() {
+    clear
     echo "  "
     echo "Installation de btop..."
     sudo apt-get install -y btop
@@ -170,6 +176,7 @@ Celle ci permet de le lancer.
 #### afficher_btop
 ```bash
 afficher_btop() {
+    clear
     echo "  "
     echo "Lancement de BTOP..."
     echo "  "
@@ -184,6 +191,7 @@ afficher_btop() {
 Cette fonction affiche les détails de la configuration réseau de votre système, comme les adresses IP et les connexions.
 ```bash
 afficher_config_reseau() {
+    clear
     echo "  "
     echo "Configuration réseau actuelle :"
     ip a
@@ -197,6 +205,7 @@ afficher_config_reseau() {
 Cette fonction surveille l'utilisation de l'espace disque sur votre système et vous avertit si l'espace est presque plein.
 ```bash
 surveillance_disque() {
+    clear
     echo "  "
     echo "Utilisation de l'espace disque :"
     df -h
@@ -217,6 +226,7 @@ surveillance_disque() {
 Cette fonction affiche une liste de tous les processus en cours d'exécution sur votre système.
 ```bash
 lister_pids() {
+    clear
     echo "  "
     echo "Liste des processus en cours :"
     ps aux
@@ -230,6 +240,7 @@ lister_pids() {
 Cette fonction arrête tous les processus en cours d'exécution pour un utilisateur spécifique.
 ```bash
 supprimer_processus() {
+    clear
     echo "Attention : Vous êtes sur le point de supprimer tous les processus utilisateur."
     read -p "Êtes-vous sûr de vouloir continuer ? (o/n) " response
     if [[ "$response" =~ ^[Oo]$ ]]; then
@@ -248,6 +259,7 @@ supprimer_processus() {
 Cette fonction envoie des signaux à un autre ordinateur ou serveur pour vérifier s'il est accessible. 
 ```bash
 ping_host() {
+    clear
     echo "   "
     read -p "Entrez l'adresse IP ou le nom d'hôte à pinguer : " host
     echo "Ping de $host :"
@@ -262,6 +274,7 @@ ping_host() {
 Cette fonction affiche des informations sur l'utilisation de la mémoire RAM de votre système.
 ```bash
 afficher_stats_ram() {
+    clear
     echo "  "
     echo "Statistiques de la mémoire RAM :"
     free -h
@@ -276,6 +289,7 @@ Cette fonction affiche des informations sur l'utilisation du processeur de votre
 
 ```bash
 afficher_stats_cpu() {
+    clear
     echo "Statistiques du CPU :"
     top -bn1 | grep "Cpu(s)"
 }
@@ -323,7 +337,7 @@ afficher_menu() {
     echo "║ 8. Afficher la configuration réseau                                        ║"
     echo "║ 9. Surveiller l'espace disque                                              ║"
     echo "║ 10. Lister tous les PID en cours                                           ║"
-    echo "║ 11. Supprimer tous les processus utilisateur sauf ce script                ║"
+    echo "║ 11. Supprimer tous les processus utilisateur                               ║"
     echo "║ 12. Effectuer un ping                                                      ║"
     echo "║ 13. Afficher les statistiques de la RAM                                    ║"
     echo "║ 14. Afficher les statistiques du CPU                                       ║"
