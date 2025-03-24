@@ -49,9 +49,8 @@ Ce script est conçu pour les systèmes basés sur **Debian/Ubuntu** ou tout aut
 3. **Naviguez jusqu'au répertoire du script :**
    - Utilisez la commande `cd` pour accéder au répertoire où le script a été téléchargé.
      ```bash
-     cd <NOM_DU_REPERTOIRE>
+     cd Menu_BASH
      ```
-   - Remplacez `<NOM_DU_REPERTOIRE>` par le nom du répertoire contenant le script.
 
 4. **Rendez le script exécutable :**
    - Exécutez la commande suivante :
